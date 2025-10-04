@@ -69,7 +69,7 @@ function Events() {
                             artist={event.artist}
                             time={event.time}
                             stage={event.stage}
-                            onRemind={() => handleRemind(event.artist)}
+                            onRemind={() => ()}
                         />
                     ))}
                 </div>
