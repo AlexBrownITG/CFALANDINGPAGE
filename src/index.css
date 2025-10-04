@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  /* --- Primary Colors --- */
+  --color-primary: #242323;
+  /* Dark/Off-Black Background */
+  --color-primary-dark: #000000;
+  /* Pure Black for borders, shadows, etc. */
+
+  /* --- Text Colors --- */
+  --color-text-base: #FFFFFF;
+  /* Standard White Text */
+  --color-text-highlighted: #F4CF42;
+  /* Bright Yellow Highlight Text */
+
+  /* --- Gradient Stops (Red/Pink Palette) --- */
+  --color-gradient-stop1: #E35254;
+  /* Lighter Red/Pink */
+  --color-gradient-stop2: #A8272C;
+  /* Darker Red */
+  /* #8B5CF6  */
+  /* #E35254 */
+  /* #06B6D4 */
+  /* #10B981 */
+  /* #F4CF42 */
+  /* #EE6200 */
+  /* --- Shared Gradients (Built from Stops) */
+  --button-bg-gradient: linear-gradient(to right, var(--color-gradient-stop1), var(--color-gradient-stop2));
+  --text-bg-gradient: linear-gradient(to bottom, var(--color-gradient-stop1), var(--color-gradient-stop2));
+  --border-color: #FFFFFF1A;
+  --text-yellow: #F4CF42;
+  /* --button-bg: linear-gradient(180deg, #E35254 0%, #A8272C 100%); */
+
+  --stage: #8B5CF6;
+  --food: #E35254;
+  --merch: #06B6D4;
+  --parking: #10B981;
+  --restroom: #F4CF42;
+  --entrance: #EE6200;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151617;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* * Utility Class to apply a background gradient to text
+ */
+.gradient-text {
+  background: var(--text-bg-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+}
+
+/* --- Text Color Utilities --- */
+.color-primary-text {
+  color: var(--color-primary);
+}
+
+.color-primary-background {
+  background-color: var(--color-primary);
+}
+
+.color-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.color-text-base {
+  color: var(--color-text-base);
+}
+
+.color-text-highlighted {
+  color: var(--color-text-highlighted);
+}
+
+.use-border {
+  border: 2px solid var(--border-color);
+}
+
+.color-gradient-stop1 {
+  color: var(--color-gradient-stop1);
+}
+
+.color-gradient-stop2 {
+  color: var(--color-gradient-stop2);
+}
+
+.button-bg-gradient {
+  background: linear-gradient(to bottom, var(--color-gradient-stop1), var(--color-gradient-stop2));
+}
+
+.border-color {
+  color: var(--border-color);
+}
+
+@import "tailwindcss";
